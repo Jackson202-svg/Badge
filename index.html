@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SI Badge Maker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <main class="container">
+        <section class="preview-area">
+            <div id="capture-zone">
+                <div id="badge" class="badge-card dark-mode">
+                    <div class="icon-container" id="icon-box">
+                        <i data-lucide="github" id="current-icon"></i>
+                    </div>
+                    <div class="text-container">
+                        <h2 id="out-name">Gemini User</h2>
+                        <p id="out-tag">Developer</p>
+                    </div>
+                </div>
+            </div>
+            <button id="download-btn">Download PNG</button>
+        </section>
+
+        <section class="controls">
+            <h1>Badge Settings</h1>
+            
+            <div class="field">
+                <label>Name</label>
+                <input type="text" id="in-name" placeholder="Enter name...">
+            </div>
+
+            <div class="field">
+                <label>Tagline</label>
+                <input type="text" id="in-tag" placeholder="Enter role...">
+            </div>
+
+            <div class="row">
+                <div class="field">
+                    <label>Color</label>
+                    <input type="color" id="in-color" value="#3b82f6">
+                </div>
+                <div class="field">
+                    <label>Theme</label>
+                    <select id="in-theme">
+                        <option value="dark">Dark</option>
+                        <option value="light">Light</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
